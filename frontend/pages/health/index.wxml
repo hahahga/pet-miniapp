@@ -1,0 +1,32 @@
+<!--pages/health/index.wxml-->
+<view class="container">
+  <!-- 顶部导航栏 -->
+  <view class="header">
+    <image src="/assets/icons/back.png" class="icon" bindtap="goHome"/>
+    <text class="title">健康监测</text>
+  </view>
+
+  <!-- 数据卡片 -->
+  <view class="data-section">
+    <view class="data-card weight-data" bindtap="showWeightDetail">
+      <view class="data-info">
+        <text class="data-label">当前体重</text>
+        <text class="data-value">5.2kg</text>
+      </view>
+      <text class="action-text">点击查看趋势 ></text>
+    </view>
+    
+    <view class="data-card temp-data" bindtap="showTempDetail">
+      <view class="data-info">
+        <text class="data-label">当前体温</text>
+        <text class="data-value">38.3℃</text>
+      </view>
+      <text class="action-text">点击查看趋势 ></text>
+    </view>
+  </view>
+
+  <!-- 图表区域 -->
+  <view class="chart-container">
+    <canvas canvas-id="healthChart" style="width:100%;height:200px;"></canvas>
+  </view>
+</view>

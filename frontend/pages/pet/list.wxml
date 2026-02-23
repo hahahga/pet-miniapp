@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="header">
+    <text>我的宠物</text>
+    <button bindtap="navigateToAddPet">添加宠物</button>
+  </view>
+  <view class="pet-list">
+    <block wx:for="{{pets}}" wx:key="id">
+      <view class="pet-item">
+        <image src="{{item.photo}}" mode="aspectFill"></image>
+        <view class="pet-info">
+          <text class="pet-name">{{item.name}}</text>
+          <text class="pet-breed">{{item.breed}}</text>
+          <text class="pet-age">{{item.age}}岁</text>
+        </view>
+        <view class="pet-actions">
+          <button bindtap="navigateToEditPet" data-id="{{item.id}}">编辑</button>
+          <button bindtap="deletePet" data-id="{{item.id}}">删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

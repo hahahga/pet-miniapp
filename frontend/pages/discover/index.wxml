@@ -1,0 +1,108 @@
+<!-- discover.wxml -->
+<view class="discover-page">
+  <!-- 顶部绿色横条（点击可返回首页） -->
+  <view class="top-bar" bindtap="goHome"></view>
+  
+  <!-- 宠物社交栏目（点击跳转） -->
+  <view class="section-title" bindtap="gotoPetSocial">
+    <image class="section-icon" src="/assets/icons/pet-social.png"></image>
+    宠物社交
+  </view>
+  
+  <!-- 动态列表（原有代码保留，增加跳转） -->
+  <view class="discover-card" wx:for="{{petPosts}}" wx:key="id">
+    <view class="card-header" bindtap="gotoUserProfile" data-id="{{item.userId}}">
+      <image class="user-avatar" src="{{item.avatar}}"></image>
+      <view class="user-info">
+        <view class="user-name">{{item.userName}}</view>
+        <view class="post-time">{{item.time}}</view>
+      </view>
+    </view>
+    
+    <view class="card-content">
+      <view class="content-text">{{item.content}}</view>
+      <view class="image-grid">
+        <view class="image-item" wx:for="{{item.images}}" wx:key="*this" bindtap="previewImage" data-urls="{{item.images}}" data-current="{{item}}">
+          <image src="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+    
+    <view class="card-footer">
+      <view class="like-btn" bindtap="likePost" data-id="{{item.id}}">
+        <image src="{{item.liked ? '/assets/icons/like-active.png' : '/assets/icons/like.png'}}"></image>
+        {{item.likeCount}}
+      </view>
+      <view class="comment-btn" bindtap="gotoPostDetail" data-id="{{item.id}}">
+        <image src="/assets/icons/comment.png"></image>
+        评论
+      </view>
+    </view>
+  </view>
+  
+  <!-- 活动推荐栏目（点击跳转） -->
+  <view class="section-title" bindtap="gotoActivity">
+    <image class="section-icon" src="/assets/icons/activity.png"></image>
+    活动推荐
+  </view>
+  
+  <!-- 服务发现栏目（点击跳转） -->
+  <view class="section-title" bindtap="gotoService">
+    <image class="section-icon" src="/assets/icons/service.png"></image>
+    服务发现
+  </view>
+</view>
+
+<!-- 顶部导航（保留原有） -->
+<view class="navbar">
+  <text class="title">发现</text>
+</view>
+
+<!-- 发布按钮（已有跳转，保留） -->
+<view class="post-btn" bindtap="gotoPost">
+  <image src="/assets/icons/edit.png" class="edit-icon"></image>
+  <text>发表动态</text>
+</view>
+
+<!-- 朋友圈动态列表（原有代码保留，增加跳转） -->
+<scroll-view class="moments-list" scroll-y>
+  <!-- 动态1 -->
+  <view class="moment-card">
+    <view class="user-info" bindtap="gotoUserProfile" data-id="user1">
+      <image src="/assets/avatars/user1.jpg" class="avatar"></image>
+      <text class="name">宠物家长小王</text>
+    </view>
+    <view class="content">
+      <text>今天带狗狗去公园玩，开心！</text>
+      <view class="image-grid">
+        <image src="/assets/posts/dog1.jpg" mode="aspectFill" bindtap="previewImage" data-urls="['/assets/posts/dog1.jpg','/assets/posts/dog2.jpg']" data-current="/assets/posts/dog1.jpg"></image>
+        <image src="/assets/posts/dog2.jpg" mode="aspectFill" bindtap="previewImage" data-urls="['/assets/posts/dog1.jpg','/assets/posts/dog2.jpg']" data-current="/assets/posts/dog2.jpg"></image>
+      </view>
+    </view>
+    <view class="footer">
+      <text class="time">10分钟前</text>
+      <view class="actions">
+        <image src="/assets/icons/like.png" bindtap="toggleLike" data-id="post1"></image>
+        <image src="/assets/icons/comment.png" bindtap="gotoPostDetail" data-id="post1" style="width: 90rpx; height: 64rpx; display: inline-block; box-sizing: border-box"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 动态2 -->
+  <view class="moment-card">
+    <view class="user-info" bindtap="gotoUserProfile" data-id="user2">
+      <image src="/assets/avatars/user2.jpg" class="avatar"></image>
+      <text class="name">猫咪爱好者</text>
+    </view>
+    <view class="content">
+      <text>分享一个养猫小技巧：定期梳毛可以减少掉毛哦~</text>
+    </view>
+    <view class="footer">
+      <text class="time">1小时前</text>
+      <view class="actions">
+        <image src="/assets/icons/liked.png" bindtap="toggleLike" data-id="post2"></image>
+        <image src="/assets/icons/comment.png" bindtap="gotoPostDetail" data-id="post2" style="width: 85rpx; display: inline-block; box-sizing: border-box; height: 39rpx"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>

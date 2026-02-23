@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="header">
+    <text>社区活动</text>
+  </view>
+  <view class="content">
+    <view class="activity-item" wx:for="{{activities}}" wx:key="id">
+      <image src="{{item.image}}" mode="aspectFill"></image>
+      <text>{{item.title}}</text>
+      <text>{{item.date}}</text>
+      <text>{{item.location}}</text>
+    </view>
+    <button bindtap="joinActivity">参加活动</button>
+  </view>
+</view>

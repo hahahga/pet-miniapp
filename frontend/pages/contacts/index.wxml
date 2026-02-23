@@ -1,0 +1,48 @@
+<view class="container">
+  <!-- 顶部搜索栏 -->
+  <view class="search-bar">
+    <image src="/assets/icons/search.png" class="search-icon"></image>
+    <input placeholder="搜索联系人" bindinput="onSearch" />
+  </view>
+
+  <!-- 功能入口 -->
+  <view class="quick-actions">
+    <view class="action-item" bindtap="addFriend">
+      <image src="/assets/icons/add-friend.png"></image>
+      <text>新的朋友</text>
+    </view>
+    <view class="action-item" bindtap="showGroups">
+      <image src="/assets/icons/group.png"></image>
+      <text>群聊</text>
+    </view>
+  </view>
+
+  <!-- 联系人列表 -->
+  <scroll-view class="contact-list" scroll-y>
+    <!-- 字母索引 -->
+    <view class="index-bar">
+      <text wx:for="{{indexLetters}}" wx:key="*this" 
+            class="{{activeIndex === item ? 'active' : ''}}"
+            bindtap="jumpToIndex">{{item}}</text>
+    </view>
+
+    <!-- 分组列表 -->
+    <view class="contact-section" wx:for="{{filteredContacts}}" wx:key="letter">
+      <view class="section-title">{{item.letter}}</view>
+      <view class="contact-item" wx:for="{{item.list}}" wx:key="id">
+        <image class="avatar" src="{{item.avatar}}"></image>
+        <text class="name">{{item.name}}</text>
+        <view class="right-content">
+          <text class="tag" wx:if="{{item.tag}}">{{item.tag}}</text>
+          <image src="/assets/icons/delete.png" class="delete-btn" 
+                 bindtap="deleteContact" data-id="{{item.id}}"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 添加好友按钮 -->
+  <view class="floating-btn" bindtap="showAddMenu">
+    <image src="/assets/icons/add.png"></image>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search-bar">
+    <image src="/assets/icons/search.png" class="search-icon"></image>
+    <input placeholder="输入用户ID/昵称/手机号" bindinput="onSearchInput"/>
+  </view>
+
+  <!-- 搜索历史 -->
+  <view class="section" wx:if="{{searchHistory.length > 0}}">
+    <view class="section-header">
+      <text>搜索历史</text>
+      <image src="/assets/icons/delete.png" bindtap="clearHistory"/>
+    </view>
+    <view class="tag-list">
+      <view wx:for="{{searchHistory}}" wx:key="*this" class="tag" bindtap="retrySearch" data-keyword="{{item}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 推荐好友 -->
+  <view class="section">
+    <view class="section-header">
+      <text>可能认识的人</text>
+    </view>
+    <view class="user-list">
+      <view class="user-item" wx:for="{{recommendUsers}}" wx:key="id">
+        <image class="avatar" src="{{item.avatar}}"></image>
+        <view class="info">
+          <text class="name">{{item.name}}</text>
+          <text class="desc">{{item.desc}}</text>
+        </view>
+        <button size="mini" bindtap="addContact" data-id="{{item.id}}">添加</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!-- 单条聊天项组件 -->
+<view class="chat-item" bindtap="onTap">
+  <image class="avatar" src="{{avatar}}" mode="aspectFill"></image>
+  <view class="content">
+    <view class="name-line">
+      <text class="name">{{name}}</text>
+      <text class="time">{{time}}</text>
+    </view>
+    <text class="message">{{content}}</text>
+  </view>
+  <view class="badge" wx:if="{{badge > 0}}">{{badge}}</view>
+</view>

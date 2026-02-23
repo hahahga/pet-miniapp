@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="header">
+    <text>宠物健康记录</text>
+  </view>
+  <view class="content">
+    <view class="record-item" wx:for="{{records}}" wx:key="id">
+      <text>{{item.date}}</text>
+      <text>{{item.type}}</text>
+      <text>{{item.description}}</text>
+    </view>
+    <button bindtap="addRecord">添加记录</button>
+  </view>
+</view>

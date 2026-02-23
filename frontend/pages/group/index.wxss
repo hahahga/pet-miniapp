@@ -1,0 +1,61 @@
+.container {
+  height: 100vh;
+  position: relative;
+}
+
+.group-list {
+  height: calc(100vh - 100rpx);
+  padding: 20rpx;
+}
+
+.group-item {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.group-item .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  display: block;
+}
+
+.last-msg {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.time {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.create-btn {
+  position: fixed;
+  right: 40rpx;
+  bottom: 120rpx;
+  background: #07C160;
+  color: white;
+  border-radius: 50rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 12rpx rgba(7, 193, 96, 0.3);
+}
+
+.create-btn image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}

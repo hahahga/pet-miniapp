@@ -1,0 +1,42 @@
+<view class="message-page">
+  <!-- 搜索栏（微调阴影和圆角） -->
+  <view class="search-bar">
+    <image src="/assets/icons/search.png" class="search-icon"></image>
+    <input placeholder="搜索" disabled bindtap="goToSearch"/>
+  </view>
+
+  <!-- 聊天列表 -->
+  <scroll-view class="chat-list" scroll-y>
+    <!-- 微信官方通知（增强视觉层次） -->
+    <view class="official-notice" bindtap="goToSystemNotice">
+      <view class="notice-icon-wrapper">
+        <image src="/assets/icons/wechat-notice.png" class="notice-icon"/>
+      </view>
+      <view class="notice-content">
+        <view class="notice-title-wrapper">
+          <text class="notice-title">宠物服务团队</text>
+          <text class="notice-time">12:30</text>
+        </view>
+        <view class="notice-desc-wrapper">
+          <text class="notice-desc">您有3条新消息</text>
+          <view class="notice-badge" wx:if="{{systemNotice.unread > 0}}">
+            {{systemNotice.unread}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 好友聊天列表 -->
+    <block wx:for="{{chatList}}" wx:key="id">
+      <chat-item 
+        avatar="{{item.avatar}}"
+        name="{{item.name}}"
+        content="{{item.lastMsg.content}}"
+        time="{{item.lastMsg.time}}"
+        badge="{{item.unread}}"
+        bindtap="goToChat"
+        data-id="{{item.id}}"
+      />
+    </block>
+  </scroll-view>
+</view>

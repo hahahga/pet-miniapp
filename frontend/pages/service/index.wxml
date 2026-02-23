@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="header">
+    <text>服务请求</text>
+  </view>
+  <scroll-view class="service-list" scroll-y>
+    <view class="service-item" wx:for="{{services}}" wx:key="id" bindtap="navigateToDetail" data-id="{{item.id}}">
+      <image class="icon" src="{{item.icon}}"></image>
+      <text class="title">{{item.title}}</text>
+      <text class="status">{{item.status}}</text>
+      <image class="arrow" src="assets/icons/arrow-right.png"></image>
+    </view>
+    <button bindtap="requestService">请求服务</button>
+  </scroll-view>
+</view>

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="header">
+    <text>消息通知</text>
+  </view>
+  <scroll-view class="notification-list" scroll-y>
+    <view class="notification-item" wx:for="{{notifications}}" wx:key="id" bindtap="navigateToDetail" data-id="{{item.id}}">
+      <image class="icon" src="{{item.icon}}"></image>
+      <text class="title">{{item.title}}</text>
+      <text class="content">{{item.content}}</text>
+      <text class="time">{{item.time}}</text>
+      <text class="status" wx:if="{{!item.read}}">未读</text>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,87 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/message/index",
+    "pages/contacts/index",
+    "pages/discover/index",
+    "pages/me/index",
+    "pages/activity/list",
+    
+
+    "pages/pet/list",
+    "pages/pet/add",
+    "pages/pet/index",
+    "pages/service/list",
+    "pages/social/feed",
+    "pages/social/index",
+    "pages/health/chart",
+    "pages/health/record",
+    "pages/health/index",
+    "pages/group/index",
+    "pages/add_friend/index",
+    "pages/map/index",
+    "pages/wallet/index",
+    "pages/service/customer/index",
+    "pages/service/index"
+    
+
+
+  ],
+  "window": {
+    "navigationBarTitleText": "宠物服务平台",
+    "navigationBarBackgroundColor": "#42b983",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f8f8f8"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/message/index",
+        "text": "消息",
+        "iconPath": "assets/icons/message.png",
+        "selectedIconPath": "assets/icons/message-active.png"
+      },
+      {
+        "pagePath": "pages/contacts/index",
+        "text": "通讯录",
+        "iconPath": "assets/icons/contacts.png",
+        "selectedIconPath": "assets/icons/contacts-active.png"
+      },
+      {
+        "pagePath": "pages/discover/index",
+        "text": "发现",
+        "iconPath": "assets/icons/discover.png",
+        "selectedIconPath": "assets/icons/discover-active.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我",
+        "iconPath": "assets/icons/me.png",
+        "selectedIconPath": "assets/icons/me-active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要获取您的位置用于附近服务"
+    }
+  },
+  "subpackages": [
+    {
+      "root": "pages/staff/",
+      "name": "staff",
+      "pages": [
+        "service_assignment/index",
+        "health_records/index",
+        "notifications/index",
+        "pet_management/index",
+        "schedule_management/index",
+        "console/index"
+      ]
+    }
+  ]
+}

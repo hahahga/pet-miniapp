@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="header">
+    <text>健康记录管理</text>
+  </view>
+  <scroll-view class="record-list" scroll-y>
+    <view class="filter-bar">
+      <picker mode="selector" range="{{petOptions}}" bindchange="filterByPet">
+        <view>宠物: {{petOptions[petIndex]}}</view>
+      </picker>
+    </view>
+    <view class="record-item" wx:for="{{records}}" wx:key="id" bindtap="navigateToDetail" data-id="{{item.id}}">
+      <text class="date">{{item.date}}</text>
+      <text class="pet">宠物: {{item.petName}}</text>
+      <text class="type">类型: {{item.type}}</text>
+      <text class="status">状态: {{item.status}}</text>
+      <button bindtap="updateRecord" data-id="{{item.id}}">更新</button>
+    </view>
+  </scroll-view>
+  <button bindtap="addRecord">添加记录</button>
+</view>

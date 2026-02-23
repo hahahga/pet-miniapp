@@ -1,0 +1,20 @@
+/* pages/health/chart.wxss */
+.data-item {
+  padding: 15px;
+  margin: 10px 0;
+  background: #e6f7ff;
+  border-radius: 8px;
+  /* 确保可点击 */
+  position: relative;
+  z-index: 1;
+}
+
+.data-item:active {
+  background: #d0ebff; /* 按压反馈 */
+}
+
+.hint {
+  color: #1890ff;
+  font-size: 14px;
+  margin-left: 10px;
+}

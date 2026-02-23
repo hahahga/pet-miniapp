@@ -1,0 +1,115 @@
+/* 页面容器 */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+/* 卡片样式 */
+.card {
+  width: 85%;
+  max-width: 400px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 标题样式 */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title image.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.title text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 选项卡样式 */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.tabs text {
+  padding: 8px 25px;
+  color: #999;
+  position: relative;
+}
+
+.tabs .active {
+  color: #07C160;
+}
+
+.tabs .active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: #07C160;
+}
+
+/* 表单样式 */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  height: 45px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.form button {
+  height: 45px;
+  margin-top: 10px;
+  background: #07C160;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* 身份选择 */
+.identity {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.identity radio-group {
+  display: flex;
+  margin-left: 10px;
+}
+
+.identity label {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.identity radio {
+  margin-right: 5px;
+}

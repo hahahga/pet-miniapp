@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="header">
+    <text>宠物档案管理</text>
+  </view>
+  <scroll-view class="pet-list" scroll-y>
+    <view class="search-bar">
+      <input placeholder="搜索宠物名称或主人ID" bindinput="searchPets"></input>
+    </view>
+    <view class="pet-item" wx:for="{{pets}}" wx:key="id" bindtap="navigateToDetail" data-id="{{item.id}}">
+      <image class="avatar" src="{{item.avatar}}"></image>
+      <text class="name">{{item.name}}</text>
+      <text class="owner">主人: {{item.ownerName}}</text>
+      <text class="status">状态: {{item.status}}</text>
+    </view>
+  </scroll-view>
+  <button bindtap="addPet">添加档案</button>
+</view>

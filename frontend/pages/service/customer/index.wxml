@@ -1,0 +1,23 @@
+<view class="customer-page">
+  <view class="header">
+    <text>联系客服</text>
+  </view>
+  
+  <view class="content">
+    <image src="/assets/icons/customer-service.png" class="service-icon"></image>
+    <text class="title">24小时在线客服</text>
+    <text class="subtitle">专业宠物顾问为您服务</text>
+    
+    <view class="contact-methods">
+      <button class="contact-btn" bindtap="callCustomerService">
+        <image src="/assets/icons/phone.png"></image>
+        <text>电话咨询</text>
+      </button>
+      
+      <button class="contact-btn" bindtap="startOnlineChat">
+        <image src="/assets/icons/chat.png"></image>
+        <text>在线咨询</text>
+      </button>
+    </view>
+  </view>
+</view>

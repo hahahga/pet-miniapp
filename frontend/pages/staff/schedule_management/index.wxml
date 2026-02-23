@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="header">
+    <text>工作日程</text>
+  </view>
+  <scroll-view class="schedule-list" scroll-y>
+    <view class="date-picker">
+      <picker mode="date" bindchange="changeDate">
+        <view>选择日期: {{selectedDate}}</view>
+      </picker>
+    </view>
+    <view class="schedule-item" wx:for="{{schedules}}" wx:key="id">
+      <text class="time">{{item.time}}</text>
+      <text class="content">{{item.content}}</text>
+      <text class="status">状态: {{item.status}}</text>
+      <button bindtap="completeSchedule" data-id="{{item.id}}">完成</button>
+    </view>
+  </scroll-view>
+  <button bindtap="addSchedule">添加日程</button>
+</view>

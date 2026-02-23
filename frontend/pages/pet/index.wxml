@@ -1,0 +1,37 @@
+<!-- 宠物档案管理页 -->
+<view class="container">
+  <view class="header">
+    <text>宠物档案管理</text>
+  </view>
+  
+  <scroll-view class="pet-list" scroll-y>
+    <!-- 搜索栏 -->
+    <view class="search-bar">
+      <input 
+        placeholder="搜索宠物名称/主人ID" 
+        placeholder-class="placeholder"
+        bindinput="handleSearch"
+      />
+    </view>
+
+    <!-- 宠物列表 -->
+    <block wx:for="{{filteredPets}}" wx:key="id">
+      <view class="pet-card" bindtap="navigateToDetail" data-id="{{item.id}}">
+        <image class="avatar" src="{{item.avatar || '/assets/default-pet.png'}}" mode="aspectFill"/>
+        <view class="info">
+          <text class="name">{{item.name}}</text>
+          <text class="meta">品种：{{item.breed || '未知'}}</text>
+          <text class="meta">主人：{{item.ownerName}}</text>
+        </view>
+        <view class="status {{item.healthStatus}}">
+          {{item.healthStatus === 'healthy' ? '健康' : '需关注'}}
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 添加按钮 -->
+  <button class="add-btn" bindtap="navigateToAdd">
+    <image src="/assets/icons/add.png" class="icon"/> 添加宠物
+  </button>
+</view>

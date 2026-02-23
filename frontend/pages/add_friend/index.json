@@ -1,0 +1,10 @@
+
+{
+  "navigationBarTitleText": "添加好友",
+  "usingComponents": {},
+  "navigationStyle": "default",
+  "backgroundColor": "#FFFFFF",
+  "navigationBarBackgroundColor": "#07C160",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": false
+}

@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="header">
+    <text>宠物社交</text>
+  </view>
+  <view class="content">
+    <view class="post-item" wx:for="{{posts}}" wx:key="id">
+      <image src="{{item.avatar}}" mode="aspectFill"></image>
+      <text>{{item.username}}</text>
+      <text>{{item.time}}</text>
+      <image src="{{item.image}}" mode="aspectFill"></image>
+      <text>{{item.content}}</text>
+      <view class="actions">
+        <button bindtap="likePost" data-id="{{item.id}}">点赞</button>
+        <button bindtap="commentPost" data-id="{{item.id}}">评论</button>
+      </view>
+    </view>
+    <button bindtap="createPost">发布动态</button>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<view class="wallet-page">
+  <view class="balance-card">
+    <text class="label">账户余额</text>
+    <text class="amount">¥ 1,288.00</text>
+  </view>
+  
+  <view class="action-buttons">
+    <button class="action-btn recharge" bindtap="navigateToRecharge">充值</button>
+    <button class="action-btn withdraw" bindtap="navigateToWithdraw">提现</button>
+  </view>
+  
+  <view class="transaction-list">
+    <view class="section-title">交易记录</view>
+    <view class="transaction-item" wx:for="{{transactions}}" wx:key="id">
+      <image class="type-icon" src="{{item.icon}}"></image>
+      <view class="info">
+        <text class="title">{{item.title}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+      <text class="amount {{item.type}}">{{item.amount}}</text>
+    </view>
+  </view>
+</view>

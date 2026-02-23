@@ -1,0 +1,19 @@
+<view class="container">
+  <!-- 群聊列表 -->
+  <scroll-view scroll-y class="group-list">
+    <view class="group-item" wx:for="{{groups}}" wx:key="id" bindtap="enterGroup" data-id="{{item.id}}">
+      <image class="avatar" src="{{item.avatar}}"></image>
+      <view class="info">
+        <text class="name">{{item.name}}</text>
+        <text class="last-msg">{{item.lastMsg}}</text>
+      </view>
+      <view class="time">{{item.time}}</view>
+    </view>
+  </scroll-view>
+
+  <!-- 创建群聊按钮 -->
+  <view class="create-btn" bindtap="createGroup">
+    <image src="/assets/icons/add-group.png"></image>
+    <text>创建群聊</text>
+  </view>
+</view>

@@ -1,0 +1,79 @@
+<view class="auth-container">
+  <!-- 卡片容器 -->
+  <view class="card">
+    <!-- 标题 -->
+    <view class="title">
+      <image src="/assets/logo.png" class="logo"></image>
+      <text>宠物社区</text>
+    </view>
+    
+    <!-- 登录/注册切换 -->
+    <view class="tabs">
+      <text 
+        class="{{isLogin ? 'active' : ''}}" 
+        bindtap="switchAuthMode"
+      >登录</text>
+      <text 
+        class="{{!isLogin ? 'active' : ''}}" 
+        bindtap="switchAuthMode"
+      >注册</text>
+    </view>
+    
+    <!-- 登录表单 -->
+    <view wx:if="{{isLogin}}" class="form">
+      <input
+        placeholder="用户名" 
+        value="{{loginForm.username}}"
+        bindinput="handleInput"
+        data-form="loginForm"
+        data-field="username"
+      />
+      <input
+        type="password"
+        placeholder="密码"
+        value="{{loginForm.password}}"
+        bindinput="handleInput"
+        data-form="loginForm"
+        data-field="password"
+      />
+      <button bindtap="handleLogin">登 录</button>
+    </view>
+    
+    <!-- 注册表单 -->
+    <view wx:else class="form">
+      <input
+        placeholder="设置用户名" 
+        value="{{registerForm.username}}"
+        bindinput="handleInput"
+        data-form="registerForm"
+        data-field="username"
+      />
+      <input
+        placeholder="手机号"
+        type="number"
+        value="{{registerForm.phone}}"
+        bindinput="handleInput"
+        data-form="registerForm"
+        data-field="phone"
+      />
+      <input
+        type="password"
+        placeholder="设置密码"
+        value="{{registerForm.password}}"
+        bindinput="handleInput"
+        data-form="registerForm"
+        data-field="password"
+      />
+      
+      <view class="identity">
+        <text>身份：</text>
+        <radio-group bindchange="handleIdentityChange">
+          <label><radio value="owner" checked/>宠物主人</label>
+          <label><radio value="admin"/>管理员</label>
+        </radio-group>
+      </view>
+      
+      <button bindtap="handleRegister">注 册</button>
+    </view>
+  </view>
+</view>

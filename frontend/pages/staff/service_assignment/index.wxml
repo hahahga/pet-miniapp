@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="header">
+    <text>服务分配</text>
+  </view>
+  <scroll-view class="service-list" scroll-y>
+    <view class="filter-bar">
+      <picker mode="selector" range="{{statusOptions}}" bindchange="filterByStatus">
+        <view>状态: {{statusOptions[statusIndex]}}</view>
+      </picker>
+    </view>
+    <view class="service-item" wx:for="{{services}}" wx:key="id" bindtap="navigateToDetail" data-id="{{item.id}}">
+      <text class="title">{{item.title}}</text>
+      <text class="pet">宠物: {{item.petName}}</text>
+      <text class="owner">主人: {{item.ownerName}}</text>
+      <text class="status">状态: {{item.status}}</text>
+      <button bindtap="assignService" data-id="{{item.id}}">分配</button>
+    </view>
+  </scroll-view>
+</view>

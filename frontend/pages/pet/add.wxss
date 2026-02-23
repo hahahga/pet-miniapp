@@ -1,0 +1,63 @@
+/* pages/pet/add/index.wxss */
+.add-pet-container {
+  padding: 30rpx;
+  background: #fff;
+}
+
+.header {
+  text-align: center;
+  font-size: 36rpx;
+  color: #FF9933; /* 保持橙色标题 */
+  padding: 20rpx 0;
+  margin-bottom: 30rpx;
+}
+
+.form-group {
+  margin-bottom: 40rpx;
+}
+
+.label {
+  display: block;
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+
+.input, .picker {
+  border: 1rpx solid #E5E5E5;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upload-area {
+  height: 200rpx;
+  background: #F5F5F5;
+  border-radius: 8rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50rpx 0;
+}
+
+.upload-area image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 15rpx;
+}
+
+.upload-area text {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.submit-btn {
+  background: #07C160;
+  color: white;
+  border-radius: 8rpx;
+  margin-top: 40rpx;
+  font-size: 32rpx;
+}

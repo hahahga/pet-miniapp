@@ -1,0 +1,61 @@
+.container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.pet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.pet-item {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pet-item image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.pet-info {
+  flex: 1;
+}
+
+.pet-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.pet-breed, .pet-age {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.pet-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pet-actions button {
+  font-size: 12px;
+  padding: 0 10px;
+  line-height: 24px;
+  min-width: 0;
+}

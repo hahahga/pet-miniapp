@@ -1,0 +1,119 @@
+.container {
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+/* 搜索栏 */
+.search-bar {
+  background: #fff;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.search-bar input {
+  flex: 1;
+  margin-left: 20rpx;
+}
+.search-icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+/* 快捷功能 */
+.quick-actions {
+  background: #fff;
+  display: flex;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+}
+.action-item {
+  flex: 1;
+  text-align: center;
+}
+.action-item image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 字母索引 */
+.index-bar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+}
+.index-bar text {
+  padding: 6rpx 10rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.index-bar .active {
+  color: #07C160;
+}
+
+/* 联系人列表 */
+.contact-section {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.section-title {
+  padding: 10rpx 30rpx;
+  font-size: 26rpx;
+  color: #999;
+  background: #f5f5f5;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.name {
+  flex: 1;
+  font-size: 30rpx;
+}
+.right-content {
+  display: flex;
+  align-items: center;
+}
+.tag {
+  font-size: 24rpx;
+  color: #fff;
+  background: #07C160;
+  padding: 4rpx 12rpx;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+.delete-btn {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+/* 悬浮按钮 */
+.floating-btn {
+  position: fixed;
+  right: 40rpx;
+  bottom: 80rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background: #07C160;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4rpx 12rpx rgba(7, 193, 96, 0.3);
+}
+.floating-btn image {
+  width: 50rpx;
+  height: 50rpx;
+}

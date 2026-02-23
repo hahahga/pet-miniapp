@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="header">
+    <text>添加宠物</text>
+  </view>
+  <form bindsubmit="submitForm">
+    <view class="form-item">
+      <text>宠物名称</text>
+      <input name="name" placeholder="请输入宠物名称" />
+    </view>
+    <view class="form-item">
+      <text>品种</text>
+      <input name="breed" placeholder="请输入宠物品种" />
+    </view>
+    <view class="form-item">
+      <text>年龄</text>
+      <input name="age" type="number" placeholder="请输入宠物年龄" />
+    </view>
+    <view class="form-item">
+      <text>性别</text>
+      <picker name="gender" range="{{['公','母']}}">
+        <view class="picker">
+          {{gender || '请选择性别'}}
+        </view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text>疫苗接种</text>
+      <textarea name="vaccination" placeholder="请输入疫苗接种情况" />
+    </view>
+    <view class="form-item">
+      <text>上传照片</text>
+      <button bindtap="chooseImage">选择图片</button>
+      <image src="{{photo}}" mode="aspectFill" wx:if="{{photo}}" />
+    </view>
+    <button form-type="submit" type="primary">提交</button>
+  </form>
+</view>

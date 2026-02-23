@@ -1,0 +1,85 @@
+/* pages/health/index.wxss */
+
+/* 容器样式 */
+.container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding-bottom: 20rpx;
+}
+
+/* 顶部导航栏 */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #42b983;
+}
+
+.header .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.header .title {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 数据卡片区域 */
+.data-section {
+  padding: 15px;
+}
+
+.data-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.data-info {
+  display: flex;
+  align-items: baseline;
+}
+
+.data-label {
+  font-size: 16px;
+  color: #333;
+  margin-right: 8px;
+}
+
+.data-value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 图表容器 */
+.chart-container {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* 操作提示文本 */
+.action-text {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 体重数据特殊样式 */
+.weight-data .data-value {
+  color: #07C160;
+}
+
+/* 体温数据特殊样式 */
+.temp-data .data-value {
+  color: #FF9933;
+}

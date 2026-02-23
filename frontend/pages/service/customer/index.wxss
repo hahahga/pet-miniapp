@@ -1,0 +1,55 @@
+.customer-page {
+  padding: 30rpx;
+  text-align: center;
+}
+
+.header {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 60rpx;
+}
+
+.service-icon {
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.subtitle {
+  color: #999;
+  font-size: 28rpx;
+  margin-bottom: 60rpx;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80rpx;
+}
+
+.contact-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.contact-btn image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.contact-btn text {
+  font-size: 28rpx;
+  color: #333;
+}

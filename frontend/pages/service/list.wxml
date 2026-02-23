@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="header">
+    <text>服务预约</text>
+  </view>
+  <view class="content">
+    <view class="service-item" wx:for="{{services}}" wx:key="id">
+      <text>{{item.name}}</text>
+      <text>{{item.date}}</text>
+      <text>{{item.status}}</text>
+    </view>
+    <button bindtap="addService">预约服务</button>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+
+{
+  "navigationBarTitleText": "群聊",
+  "usingComponents": {},
+  "navigationStyle": "default",
+  "backgroundColor": "#F7F7F7",
+  "navigationBarBackgroundColor": "#07C160",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

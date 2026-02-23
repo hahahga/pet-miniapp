@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="header">
+    <text>宠物社交</text>
+  </view>
+  
+  <scroll-view class="feed-list" scroll-y>
+    <view class="feed-item" wx:for="{{feeds}}" wx:key="id">
+      <view class="user-info">
+        <image class="avatar" src="{{item.user.avatar || '/assets/default-avatar.png'}}"></image>
+        <text class="name">{{item.user.name}}</text>
+      </view>
+      
+      <image class="content-image" src="{{item.image}}" mode="aspectFill"></image>
+      
+      <text class="content-text">{{item.content}}</text>
+      
+      <view class="actions">
+        <image class="action-icon" src="/assets/icons/like.png"></image>
+        <image class="action-icon" src="/assets/icons/comment.png"></image>
+        <image class="action-icon" src="/assets/icons/share.png"></image>
+      </view>
+    </view>
+  </scroll-view>
+  
+  <button class="post-btn" bindtap="createPost">发布动态</button>
+</view>

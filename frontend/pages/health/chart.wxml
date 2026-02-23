@@ -1,0 +1,27 @@
+<!-- pages/health/chart.wxml -->
+<view class="container">
+  <!-- 顶部导航 -->
+  <view class="header" style="width: 568rpx; display: block; box-sizing: border-box">
+    <image style="width: 743rpx; display: inline-block; box-sizing: border-box" src="/assets/icons/home.png" class="icon" bindtap="goHome"/>
+    <text class="title">健康图表</text>
+  </view>
+
+  <!-- 数据区域 -->
+  <view class="data-section">
+    <view class="data-item" bindtap="showWeightDetail">
+      <text>体重变化</text>
+      <text class="hint">点击查看详情</text>
+    </view>
+    
+    <view class="data-item" bindtap="showTempDetail">
+      <text>体温变化</text>
+      <text class="hint">点击查看详情</text>
+    </view>
+  </view>
+
+  <!-- 图表区域 -->
+  <view class="chart-container" style="height: 53rpx; display: block; box-sizing: border-box">
+    <text class="chart-label">body.</text>
+    <canvas style="width:428px;height:63px"></canvas>
+  </view>
+</view>
